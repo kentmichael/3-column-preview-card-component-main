@@ -13,7 +13,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: https://kentmichael.github.io/3-column-preview-card-component-main/
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
