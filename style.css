@@ -1,0 +1,126 @@
+/* global variables */
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+
+  --font-size-body: 15px;
+  --font-fam-lexend: 'Lexend Deca', sans-serif;
+  --font-fam-big-s-d: 'Big Shoulders Display', cursive;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--very-light-gray);
+  font-size: var(--font-size-body);
+  font-family: var(--font-fam-lexend);
+}
+
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+.card-component {
+  margin: 60px 20px;
+}
+
+h1 {
+  color: var(--very-light-gray);
+  font-family: var(--font-fam-big-s-d);
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+p {
+  color: var(--transparent-white);
+  line-height: 2;
+  text-align: left;
+}
+
+.card-component > * {
+  padding: 40px;
+}
+
+.sedan-section {
+  background-color: var(--bright-orange);
+  border-radius: 10px 10px 0px 0px;
+}
+
+.suv-section {
+  background-color: var(--dark-cyan);
+}
+
+.luxury-section {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0px 0px 10px 10px;
+}
+
+a {
+  display: inline-block;
+  padding: 10px 25px;
+  background-color: var(--very-light-gray);
+  border-radius: 20px;
+  border: 2px solid var(--very-light-gray);
+  margin-top: 20px;
+  transition: all .3s ease;
+}
+
+.sedan-section > a {
+  color: var(--bright-orange);
+}
+.suv-section > a {
+  color: var(--dark-cyan);
+}
+.luxury-section > a {
+  color: var(--very-dark-cyan);
+}
+
+a:hover {
+  background-color: transparent;
+  color: var(--very-light-gray);
+  border: 2px solid var(--very-light-gray);
+}
+
+@media (min-width: 800px) {
+  body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+  }
+  .card-component {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  a {
+    margin-top: 80px;
+  }
+  .sedan-section {
+    border-radius: 10px 0px 0px 10px;
+  }
+  .luxury-section {
+    border-radius: 0px 10px 10px 0px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .card-component {
+    margin: 0px 300px;
+  }
+}
+
